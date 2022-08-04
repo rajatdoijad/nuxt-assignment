@@ -40,7 +40,7 @@
                 <table class="ml-5 m-2 sm:item-center">
                     <!-- Name -->
                     <tr>
-                        <td>
+                        <td>    
                             <label for="name " class="font-bold">Name</label>
                         </td>
                         <td>
