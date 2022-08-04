@@ -1,12 +1,12 @@
 <template>
     <div class=" flex md:container md:mx-auto">
         <div class="md:w-2/3 bg-teal-600">
-            <h3 class="text-red-600 flex justify-center font-bold text-2xl  text-center "> Display User Information </h3>
+            <h1 class="text-red-600 font-bold flex justify-center  text-2xl  text-center "> Display User Information </h1>
 
             <!-- <input type="text"  @keyup="userFindByName(userName)" v-model="userName" id="userName" name="userName" placeholder="Find by Name" class="rounded-xl p-1 m-1">
             <input type="text" @keyup="userFindByEmail(userEmail)" v-model="userEmail" id="userEmail" name="userEmail" placeholder="Find by Email" class="rounded-xl p-1 m-1">
             <input type="number" @keyup="userFindByMobile(userMob)" v-model="userMob" id="userMob" name="userMob" placeholder="Find by Mob" class="rounded-xl p-1 m-1"> -->
-            <input type="text" @keyup="userFindByAddress(userAddress)" v-model="userAddress" id="userName" name="userAddress" placeholder="Search for Anything" class="rounded-xl px-5 p-1 m-1">
+            <input type="text" @keyup="userFindByAddress(userAddress)" v-model="userAddress" id="userName" name="userAddress" placeholder="Search for Anything" class=" rounded-xl px-5 p-1 m-1  ">
             <table  class="w-11/12 border-1 m-3 border-stone-800">
                 <!-- v-show="allUserData.length>=1" -->
                 <tr class="border border-1 border-stone-800">
@@ -35,23 +35,23 @@
         <!-- </div> -->
 
         <div class="bg-red-100  sm:w-1/3" >
-            <h6 id="formName" class="text-blue sm:text-3xl item-center flex justify-center font-bold sm:ml-8">Add User Info</h6>
+            <h6 id="formName" class="text-blue sm:text-3xl item-center flex justify-center sm:ml-8">Add User Info</h6>
             <form method="post">
                 <table class="ml-5 m-2 sm:item-center">
                     <!-- Name -->
                     <tr>
                         <td>
-                            <label for="name">Name</label>
+                            <label for="name " class="font-bold">Name</label>
                         </td>
                         <td>
-                            <input type="text" @change="validationName" v-model="userData.name" name="name" id="name" placeholder="Name" class="sm:rounded-xl sm:p-1" required>
+                            <input type="text" @change="validationName" v-model="userData.name" name="name" id="name" placeholder="Name" class=" sm:rounded-xl sm:p-1" required>
                         </td>
                     </tr>
 
                     <!-- Email -->
                     <tr>
                         <td>
-                            <label for="email">Email</label>
+                            <label for="email" class="font-bold">Email</label>
                         </td>
                         <td>
                             <input type="email" @change=" validationEmail" v-model="userData.email" name="email" id="email" placeholder="Email" class="sm:rounded-xl sm:p-1" required>
@@ -61,17 +61,17 @@
                     <!-- Mobile -->
                     <tr>
                         <td>
-                            <label for="mobile">Mobile</label>
+                            <label for="mobile" class="font-bold">Mobile</label>
                         </td>
                         <td>
-                            <input type="number" @change=" validationMobile" v-model="userData.mobile" name="mobile" id="moile" placeholder=" Mobile No." class="sm:rounded-xl mr-5 sm:p-1" required>
+                            <input type="number" @change=" validationMobile" v-model="userData.mobile" name="mobile" id="moile" placeholder=" Mobile " class="sm:rounded-xl mr-5 sm:p-1" required>
                         </td>
                     </tr>
 
                     <!-- Address -->
                     <tr>
                         <td>
-                            <label for="address">Address</label>
+                            <label for="address" class="font-bold">Address</label>
                         </td>
                         <td>
                             <textarea name="address" @change=" validationAddress" v-model="userData.address" id="address" placeholder="Address" class="sm:rounded-xl sm:p-1 "  rows="3" required></textarea>
@@ -80,10 +80,10 @@
                     <!-- Buttons -->
                     <tr>
                         <td>
-                            <button @click="submitUserForm" class="bg-blue-800  p-1 px-2 rounded-lg text-white" id="submit" type="submit">Submit</button>
+                            <button @click="submitUserForm" class="bg-blue-800 font-bold p-1 px-2 rounded-lg text-white" id="submit" type="submit">Submit</button>
                         </td>
                         <td>
-                            <button @click="resetForm" class="bg-blue-800  p-1 px-2 rounded-lg text-white" id="reset" type="reset">Reset</button>
+                            <button @click="resetForm" class="bg-blue-800 font-bold ml-10 p-1 px-2 rounded-lg text-white" id="reset" type="reset">Reset</button>
                         </td>
                     </tr>
 
@@ -92,7 +92,7 @@
 
         </div>
     </div>
-    <hr class=" mt-4 border-2 border-black">
+    <hr class=" mt-4 border-1 border-black">
     <div>
         <table  class="w-full border-1 m-3 border-stone-800">
                 <!-- v-show="allUserData.length>=1" -->
@@ -376,3 +376,4 @@ export default {
 }
 
 </script>
+
